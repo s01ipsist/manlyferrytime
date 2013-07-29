@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Sam Giffney -- Can't read a timetable while drunk
+
+# THANKS
+
+    The Manly Ferry staff member who woke me up as the ferry gates were closing so I had to go back to town and then catch a bus home. Dick.
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Bootstrap, Zepto, Underscore, Heroku

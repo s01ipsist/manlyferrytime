@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Manly - Circular Quay Ferry Times</title>
+    <meta name="description" content="The simplest way to see upcoming Manly ferry departures">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="container">
+      <h1>Manly - Circular Quay Ferry Times</h1>
+
+      <em id='time_now'></em>
+      <strong id='ph'></strong>
+      <p>Upcoming Departures</p>
+      <form class="form-inline" style="margin:0px">
+          <div class="radio">
+            <label class="radio-inline">
+              <input type="radio" name="direction" id="from" checked>
+              From Manly
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="direction" id="to">
+              To Manly
+            </label>
+          </div>
+      </form>
+      <div id='timetable'>Because I'm sick of having to carry a timetable or lookup ferry times on 131500 and I can't read them anyway when I'm drunk</div>
+        
+    </div>
+    <script src="js/vendor/zepto-1.0.min.js"></script>
+    <script src="js/vendor/underscore-1.5.1-min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
