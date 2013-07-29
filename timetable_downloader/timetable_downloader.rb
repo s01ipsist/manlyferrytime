@@ -9,7 +9,7 @@ def extract_departure_times(page)
       hours = $1.to_i
       mins = $2.to_i
       ampm = $3
-      hours += 12 if ampm == 'pm' && hours != 12
+      hours += 12 if ((ampm == 'pm' && hours != 12) || (ampm == 'am' && hours == 12))
       "#{sprintf('%02d', hours);}:#{sprintf("%.2d",mins)}"
     else
       print "Unrecognised time #{t} on #{page.title}\n"
@@ -65,10 +65,10 @@ def read_timetables(local_file)
 end
 
 local_file = 'departure_times.json'
-departure_times = File.exists?(local_file) ? read_timetables(local_file) : download_timetables(local_file)
+departure_times = download_timetables(local_file)
 
 p departure_times
 =begin
 http://www.manlyfastferry.com.au/media/manly_circularquay_services_20120917.jpg
-http://www.sydneyfastferries.com.au/about-us.html 
+http://www.sydneyfastferries.com.au/about-us.html
 =end
