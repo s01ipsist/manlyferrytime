@@ -39,7 +39,7 @@ function displayUpcoming(route){
 
   var route_provider = route.replace(/.*:/,'');
 
-  $("#timetable").append('<p>' + route_provider + '</p>');
+  $("#timetable").append('<h6>' + route_provider + '</h6>');
   if (_.isEmpty(upcoming)){
     var x = 'Nothing'
     var remaining = _.filter(route_times, function(x){ return x > time_now });
