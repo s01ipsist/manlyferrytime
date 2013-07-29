@@ -6,3 +6,6 @@
 
 # Ignore bundler config.
 /.bundle
+
+timetable_downloader/*.json
+timetable_downloader/cache
