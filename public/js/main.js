@@ -8,8 +8,10 @@ function setDayOfWeek(){
 
   if ((now.getFullYear() in holidays) && ((now.getMonth() + 1) in holidays[now.getFullYear()])){
     var holiday = holidays[now.getFullYear()][now.getMonth() + 1][now.getDate()];
-    day_of_week = 'hol';
-    $("#ph").text(holiday);
+    if( typeof holiday !== 'undefined' ) {     
+      day_of_week = 'hol';
+      $("#ph").text(holiday);
+    }
   }
 }
 
