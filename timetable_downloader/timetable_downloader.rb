@@ -53,6 +53,27 @@ def download_timetables(local_file)
     }
   }
 
+  # add times after midnight to next days schedule as well so shows up on both days
+  days_of_week = ['mon','tue','wed','thu','fri','sat','sun', 'mon']
+  dates.each{ |day_of_week, date|
+    next unless days_of_week.index(day_of_week) # e.g. 'hol'
+    routes.each{ |route_code, route_name|
+      times = departure_times[day_of_week][route_name]
+      next_day_of_week = days_of_week[days_of_week.index(day_of_week) + 1]
+      times.each{ |time|
+        if time >= '24:00'
+          tomorrows_time = time.gsub('24:', '00:')
+          if departure_times[next_day_of_week][route_name].nil?
+            require 'byebug'; byebug
+          end
+          departure_times[next_day_of_week][route_name] = [tomorrows_time] + departure_times[next_day_of_week][route_name]
+        end
+      }
+    }
+  }
+
+
+
   File.open(local_file, 'w'){|f|
     f.print departure_times.to_json
   }
@@ -66,6 +87,10 @@ end
 
 local_file = 'departure_times.json'
 departure_times = download_timetables(local_file)
+
+File.open('departure_times_pp.json', 'w'){|f|
+  f.print JSON.pretty_generate(departure_times)
+}
 
 p departure_times
 =begin
