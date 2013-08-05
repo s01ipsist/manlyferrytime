@@ -29,7 +29,12 @@ function updateTime(){
 
 function get131500url(){
   var now = new Date();
-  var d = _.template( 'http://www.131500.com.au/plan-your-trip?session=invalidate&itd_anyObjFilter_origin=2&itd_name_origin=Manly&itd_anyObjFilter_destination=2&itd_name_destination=Circular+Quay&itd_itdDate=<%= getFullYear() %><%= (getMonth() + 1 < 10) ? "0" : "" %><%= getMonth() + 1 %><%= (getDate() < 10) ? "0" : "" %><%= getDate() %>&itd_itdTripDateTimeDepArr=dep&itd_itdTimeHour=<%= getHours() %>&itd_itdTimeMinute=<%= getMinutes() %>&itd_itdTimeAMPM=am&itd_includedMeans=checkbox&itd_inclMOT_7=1&itd_inclMOT_9=Ferry&itd_trITMOT=100&itd_trITMOTvalue100=15&itd_changeSpeed=normal&itd_routeType=LEASTTIME', now );
+  var d;
+  if ($("#from").prop('checked')) {
+    d  = _.template( 'http://www.131500.com.au/plan-your-trip?session=invalidate&itd_anyObjFilter_origin=2&itd_name_origin=Manly&itd_anyObjFilter_destination=2&itd_name_destination=Circular+Quay&itd_itdDate=<%= getFullYear() %><%= (getMonth() + 1 < 10) ? "0" : "" %><%= getMonth() + 1 %><%= (getDate() < 10) ? "0" : "" %><%= getDate() %>&itd_itdTripDateTimeDepArr=dep&itd_itdTimeHour=<%= getHours() %>&itd_itdTimeMinute=<%= getMinutes() %>&itd_itdTimeAMPM=am&itd_includedMeans=checkbox&itd_inclMOT_7=1&itd_inclMOT_9=Ferry&itd_trITMOT=100&itd_trITMOTvalue100=15&itd_changeSpeed=normal&itd_routeType=LEASTTIME', now );
+  } else {
+    d  = _.template( 'http://www.131500.com.au/plan-your-trip?session=invalidate&itd_anyObjFilter_origin=2&itd_name_origin=Circular+Quay&itd_anyObjFilter_destination=2&itd_name_destination=Manly&itd_itdDate=<%= getFullYear() %><%= (getMonth() + 1 < 10) ? "0" : "" %><%= getMonth() + 1 %><%= (getDate() < 10) ? "0" : "" %><%= getDate() %>&itd_itdTripDateTimeDepArr=dep&itd_itdTimeHour=<%= getHours() %>&itd_itdTimeMinute=<%= getMinutes() %>&itd_itdTimeAMPM=am&itd_includedMeans=checkbox&itd_inclMOT_7=1&itd_inclMOT_9=Ferry&itd_trITMOT=100&itd_trITMOTvalue100=15&itd_changeSpeed=normal&itd_routeType=LEASTTIME', now );
+  }
   return d;
 }
 
@@ -76,7 +81,7 @@ function displayUpcomingAll(){
   }
   _.each(routes_filtered, displayUpcoming);
 
-  var a131500 = _.template("<a href='<%= url %>'>Check on 131500</a>");
+  var a131500 = _.template("<a href='<%= url %>'><i class='icon-hand-right'></i> Check on 131500</a>");
   $("#timetable").append(a131500({url : get131500url()}));
 }
 
@@ -84,6 +89,16 @@ $("#from").change(function() {
   displayUpcomingAll();
 });
 $("#to").change(function() {
+  displayUpcomingAll();
+});
+$("#route_selection_button").click(function() {
+  if ($("#from").prop('checked')) {
+    $("#to").prop('checked', true);
+    $("#route_selection_button").html('From Circular Quay <i class="icon-random icon-white"></i> To Manly');
+  } else {
+    $("#from").prop('checked', true);
+    $("#route_selection_button").html('From Manly <i class="icon-random icon-white"></i> To Circular Quay');
+  }
   displayUpcomingAll();
 });
 

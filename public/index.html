@@ -18,20 +18,23 @@
       <em id='time_now'></em>
       <strong id='ph'></strong>
       <p>Upcoming Departures</p>
-      <form style="margin:0px">
-          <div class="radio">
-            <label>
-              <input type="radio" name="direction" id="from" checked>
-              From Manly To Circular Quay
-            </label>
-            <label>
-              <input type="radio" name="direction" id="to">
-              To Manly From Circular Quay
-            </label>
-          </div>
-      </form>
+      <div id='route_selection'>
+        <a href='#' class='btn btn-primary' id='route_selection_button'>From Manly <i class="icon-random icon-white"></i> To Circular Quay</a>
+        <form style="margin:0px" class="hidden">
+            <div class="radio">
+              <label>
+                <input type="radio" name="direction" id="from" checked>
+                From Manly To Circular Quay
+              </label>
+              <label>
+                <input type="radio" name="direction" id="to">
+                To Manly From Circular Quay
+              </label>
+            </div>
+        </form>
+      </div>
       <div id='timetable'>Loading today's Manly ferry timetables for the slow ferry, <a href= "http://www.manlyfastferry.com.au">Manly Fast Ferry</a> and <a href="http://www.sydneyfastferries.com.au">Sydney Fast Ferries</a>.</div>
-      <a href= "/about.html">About</a>
+      <a href= "/about.html"><i class="icon-question-sign"></i> About</a>
     </div>
     <script src="js/vendor/jquery-1.10.2.min.js"></script>
     <script src="js/vendor/underscore-1.5.1-min.js"></script>
