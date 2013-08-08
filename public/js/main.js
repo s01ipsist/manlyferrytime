@@ -94,10 +94,10 @@ $("#to").change(function() {
 $("#route_selection_button").click(function() {
   if ($("#from").prop('checked')) {
     $("#to").prop('checked', true);
-    $("#route_selection_button").html('From Circular Quay <i class="icon-random icon-white"></i> To Manly');
+    $("#route_selection_button").html('From Circular Quay <i class="icon-arrow-right icon-white"></i> To Manly');
   } else {
     $("#from").prop('checked', true);
-    $("#route_selection_button").html('From Manly <i class="icon-random icon-white"></i> To Circular Quay');
+    $("#route_selection_button").html('From Manly <i class="icon-arrow-right icon-white"></i> To Circular Quay');
   }
   displayUpcomingAll();
 });

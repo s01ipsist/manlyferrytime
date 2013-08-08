@@ -778,3 +778,7 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 .icon-question-sign {
   background-position: -96px -96px;
 }
+
+.icon-arrow-right {
+  background-position: -264px -96px;
+}
