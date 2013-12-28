@@ -1,25 +1,29 @@
 require 'rubygems'
 require 'json'
+require 'addressable/uri' #https://github.com/sporkmonger/addressable
+
 load 'cacher.rb'
 
 def extract_departure_times(page)
-  page.search("//table[@summary='Search Results Details']/tbody/tr[1]/td[@headers='headRoute1 headStop6_1']").map{ |node|
+  # require 'byebug'; byebug
+  page.search("//table[@class='table-stripes timetable-stops-table']/tbody[@class='stop-odd']/tr[1]/td").map{ |node|
     t = node.inner_html
-    if t =~ /(\d+):(\d+)(am|pm)/
-      hours = $1.to_i
-      mins = $2.to_i
-      ampm = $3
-      hours += 12 if ((ampm == 'pm' && hours != 12) || (ampm == 'am' && hours == 12))
-      "#{sprintf('%02d', hours);}:#{sprintf("%.2d",mins)}"
+    if t =~ /(\d+):(\d+)/
+      t
     else
       print "Unrecognised time #{t} on #{page.title}\n"
     end
   }
 end
 
-def get_departure_times(route_code, date)
-  url = "http://www.131500.com.au/plan-your-trip/timetables/@@details?line=#{route_code}&itd_itdDate=#{date}"
-  # http://www.131500.com.au/plan-your-trip/timetables/@@details?line=NSW:09MAN:L:H:SJ2&itd_itdDate=20131225
+def get_departure_times(params)
+  url = "http://www.transportnsw.info/en/maps-and-timetables/timetables-result.page"
+
+  uri = Addressable::URI.parse(url)
+  uri.query_values = params
+
+  url = uri.to_s
+
   print "#{url}\n"
   page = getPage(url)
   extract_departure_times(page)
@@ -28,31 +32,99 @@ end
 def download_timetables(local_file)
   # route code by clicking on show timetable for route at http://www.131500.com.au/plan-your-trip/timetables/ and getting line url param
   routes = {}
-  routes['NSW:090F1:_:H:SJ2'] = 'To Manly:Slow Ferry' #Circular Quay to Manly'
-  routes['NSW:55001:_:H:SJ2'] = 'To Manly:Manly Fast Ferry' #Circular Quay to Manly (Manly Fast Ferry)'
-  routes['NSW:56001:_:H:SJ2'] = 'To Manly:Sydney Fast Ferries' #Circular Quay to Manly (Sydney Fast Ferry)'
-  routes['NSW:090F1:_:R:SJ2'] = 'From Manly:Slow Ferry' #Manly to Circular Quay'
-  routes['NSW:55001:_:R:SJ2'] = 'From Manly:Manly Fast Ferry' #Manly to Circular Quay (Manly Fast Ferry)'
-  routes['NSW:56001:_:R:SJ2'] = 'From Manly:Sydney Fast Ferries' #Manly to Circular Quay (Sydney Fast Ferry)'
+  routes['To Manly:Slow Ferry'] = #Circular Quay to Manly'
+    {
+      routeNum: 'F1 Manly',
+      wca: 'false',
+      mode: 'ferry',
+      direction: 'inbound',
+      type: 'reverse',
+      directionName: '(090F1)',
+      operator: '112',
+      motDesc: 'Sydney ferries',
+      count: '2',
+    }
+  routes['To Manly:Manly Fast Ferry'] =  #Circular Quay to Manly (Manly Fast Ferry)'
+    {
+      routeNum: 'Manly Fast Ferry',
+      wca: 'false',
+      mode: 'ferry',
+      direction: 'outbound',
+      type: 'normal',
+      directionName: '(55MFF)',
+      operator: '306',
+      motDesc: 'Private ferry services',
+      count: '2',
+    }
+  routes['To Manly:Sydney Fast Ferries'] =  #Circular Quay to Manly (Sydney Fast Ferry)'
+    {
+      routeNum: 'Sydney Fast Ferry',
+      wca: 'false',
+      mode: 'ferry',
+      direction: 'reverse',
+      type: 'normal',
+      directionName: '(56SFF)',
+      operator: '307',
+      motDesc: 'Private ferry services',
+      count: '2',
+    }
+  routes['From Manly:Slow Ferry'] = #Manly to Circular Quay'
+    {
+      routeNum: 'F1 Manly',
+      wca: 'false',
+      mode: 'ferry',
+      direction: 'inbound',
+      type: 'normal',
+      directionName: '(090F1)',
+      operator: '112',
+      motDesc: 'Sydney ferries',
+      count: '2',
+    }
+  routes['From Manly:Manly Fast Ferry'] =  #Manly to Circular Quay (Manly Fast Ferry)'
+    {
+      routeNum: 'Manly Fast Ferry',
+      wca: 'false',
+      mode: 'ferry',
+      direction: 'outbound',
+      type: 'reverse',
+      directionName: '(55MFF)',
+      operator: '306',
+      motDesc: 'Private ferry services',
+      count: '2',
+    }
+  routes['From Manly:Sydney Fast Ferries'] =  #Manly to Circular Quay (Sydney Fast Ferry)'
+    {
+      routeNum: 'Sydney Fast Ferry',
+      wca: 'false',
+      mode: 'ferry',
+      direction: 'inbound',
+      type: 'normal',
+      directionName: '(56SFF)',
+      operator: '307',
+      motDesc: 'Private ferry services',
+      count: '2',
+    }
 
   dates = {} # some typical non public holiday dates, must be future dated and < 90 days
-  dates['mon'] = '20131111'
-  dates['tue'] = '20131110'
-  dates['wed'] = '20131112'
-  dates['thu'] = '20131113'
-  dates['fri'] = '20131114'
-  dates['sat'] = '20131115'
-  dates['sun'] = '20131116'
-  dates['hol'] = '20140127'
+  dates['mon'] = '2013-12-30'
+  dates['tue'] = '2013-12-31'
+  dates['wed'] = '2014-01-01'
+  dates['thu'] = '2014-01-02'
+  dates['fri'] = '2014-01-03'
+  dates['sat'] = '2014-01-04'
+  dates['sun'] = '2014-01-05'
+  dates['hol'] = '2014-01-01'
 
   departure_times = {}
 
   dates.each{ |day_of_week, date|
     print "Downloading #{date}\n"
     departure_times[day_of_week] = {}
-    routes.each{ |route_code, route_name|
-      print "Route #{route_code} #{route_name}\n"
-      times = get_departure_times(route_code, date)
+    routes.each{ |route_name, params|
+      print "Route #{route_name}\n"
+
+      params.merge!({date: date})
+      times = get_departure_times(params)
       departure_times[day_of_week][route_name] = times
       print "#{times}\n\n"
     }
@@ -62,7 +134,7 @@ def download_timetables(local_file)
   days_of_week = ['mon','tue','wed','thu','fri','sat','sun', 'mon']
   dates.each{ |day_of_week, date|
     next unless days_of_week.index(day_of_week) # e.g. 'hol'
-    routes.each{ |route_code, route_name|
+    routes.each{ |route_name, params|
       times = departure_times[day_of_week][route_name]
       next_day_of_week = days_of_week[days_of_week.index(day_of_week) + 1]
       times.each{ |time|
