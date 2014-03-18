@@ -1,7 +1,6 @@
-require 'json'
 require 'nokogiri'
 
-class Timetable
+class TimetableParser
   def initialize(html)
     @html = html
   end

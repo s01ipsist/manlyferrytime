@@ -3,18 +3,20 @@ require 'httparty'
 class TransportNsw
   include HTTParty
   base_uri 'www.transportnsw.info'
-  # debug_output $stderr
+  debug_output $stderr
 
   def initialize
   end
 
   def timetable(route, date)
     raise ArgumentError unless ROUTES.has_key?(route)
-    options = { query: ROUTES[route].merge({date: date}) }
-    self.class.get("/en/maps-and-timetables/timetables-result.page", options)
+    options = { query: ROUTES[route].merge({ date: date }) }
+    self.class.get('/en/maps-and-timetables/timetables-result.page', options)
   end
 
-  # see route codes by clicking on show timetable for route at http://www.131500.com.au/plan-your-trip/timetables/ and getting line url param
+  # see route codes by clicking on show timetable for route at
+  # http://www.transportnsw.info/en/maps-and-timetables/index.page?#ferry-status-updates-item-tab
+  # and getting line url param
   ROUTES = {
     'To Manly:Slow Ferry' => #Circular Quay to Manly'
       {
@@ -45,7 +47,7 @@ class TransportNsw
         routeNum: 'Sydney Fast Ferry',
         wca: 'false',
         mode: 'ferry',
-        direction: 'reverse',
+        direction: 'outbound',
         type: 'normal',
         directionName: '(56SFF)',
         operator: '307',

@@ -1,0 +1,401 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=5458ACA9E3FAAA951DB4F50B78DF3972; Path=/; HttpOnly
+Content-Type: text/html;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Tue, 18 Mar 2014 03:32:06 GMT
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: NSC_WEB_STL=ffffffff0966850645525d5f4f58455e445a4a423660;expires=Tue, 18-Mar-2014 03:47:06 GMT;path=/;httponly
+
+<!DOCTYPE html>
+<html lang="en"><head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Timetable details | transportnsw.info</title><!--fixed-layout--><!--ls:begin[stylesheet]--><link href="/iwov-resources/fixed-layout/empty-content-page.css" type="text/css" rel="stylesheet"><!--ls:end[stylesheet]--><!--ls:begin[meta-keywords]--><meta name="keywords" content="Trip planning, timetables, maps, Sydney transport, NSW transport, transport information, plan your trip, transportnsw, transportinfo"><!--ls:end[meta-keywords]--><!--ls:begin[meta-description]--><meta name="description" content=""><!--ls:end[meta-description]--><!--ls:begin[meta-vpath]--><meta name="vpath" content=""><!--ls:end[meta-vpath]--><!--ls:begin[meta-page-locale-name]--><meta name="page-locale-name" content=""><!--ls:end[meta-page-locale-name]--><!--ls:begin[stylesheet]--><link type="text/css" href="/resources/transportNSWinfo/css/frutiger_v.01.css" rel="stylesheet"><!--ls:end[stylesheet]--><!--ls:begin[stylesheet]--><link type="text/css" href="/resources/transportNSWinfo/css/style_v.01.css" rel="stylesheet"><!--ls:end[stylesheet]--><!--ls:begin[favicon]--><link type="image/x-icon" href="/resources/transportNSWinfo/images/favicon.ico" rel="shortcut icon"><!--ls:end[favicon]--><!--ls:begin[stylesheet]--><link type="text/css" href="/resources/css/jquery-ui-1.10.0.custom.min_v.01.css" rel="stylesheet"><!--ls:end[stylesheet]--><!--ls:begin[stylesheet]--><link type="text/css" href="/resources/css/jquery.fancybox_v.01.css" rel="stylesheet"><!--ls:end[stylesheet]--><!--ls:begin[script]--><script type="text/javascript" src="/resources/transportNSWinfo/js/js-timetable_v.01.js"></script><!--ls:end[script]--><!--ls:begin[head-injection]--><meta content="Transport for NSW, Customer Experience Division, Customer Service Branch, Customer Information Services Section" name="DCTERMS.creator"/><meta content="Transport for NSW" name="DCTERMS.publisher"/><meta content="transportnsw.info/about/conditions" name="DCTERMS.rights"/><meta content="This service is also available over the phone. Call 131 500." name="AGLSTERMS.availability"/><meta content="Trip planning and public transport information for Sydney and NSW, Australia" name="AGLSTERMS.function"/><meta content="New South Wales" name="DCTERMS.coverage"/><meta content="Timetable details" name="DC.title"/><meta content="en-AU" name="DCTERMS.Language"/><meta content="http://transportnsw.info/en/maps-and-timetables/timetables-result.page" name="DCTERMS.identifier"/><meta content="2013-11-19 10:29:02" name="DCTERMS.available"/><meta content="2014-02-21 02:07:24" name="DCTERMS.modified"/>
+<!-- Analytics specific javascript file -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })
+(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+</script>
+
+
+<!-- Analytics specific javascript code --> 
+<script type="text/javascript"> 
+  ga('create', 'UA-43393671-1', 'transportnsw.info'); 
+  ga('send', 'pageview'); 
+</script>
+
+<!--ls:end[head-injection]--><!--[if lt IE 9]>
+                <script src="/resources/js/html5shiv.js"></script>
+        <![endif]--><!--[if (gte IE 6)&(lte IE 8)]>
+			<script src="/resources/js/selectivizr-min.js"></script>
+        <![endif]--></head><body><!--ls:begin[body]--><div class="ls-canvas layout" id="2-column-content"><div class="ls-row header-fill" id="header-fill"><div class="ls-fxr" id="ls-gen58135162-ls-fxr"><div class="ls-area" id="ls-row-1-area-1"><div class="ls-area-body" id="ls-gen58135163-ls-area-body"><div class="ls-cmp-wrap ls-1st" id="w1378867795932"><!--ls:begin[component-1378867795932]--><div class="iw_component" id="1378867795932"><a class="skip-link" href="#mainContent">Skip to content</a><div class="bar">
+<ul class="bar-navigation">
+<li class="bar-tools-transit active">
+<a href="http://www.transportnsw.info">Public transport</a>
+</li>
+<li class="bar-tools-business">
+<a href="http://www.transport.nsw.gov.au/">Corporate</a>
+</li>
+<li class="bar-tools-drive">
+<a href="http://rms.nsw.gov.au/">Roads &amp; Maritime</a>
+</li>
+</ul>
+</div><header role="banner" id="header">
+<div class="header-inner">
+<div id="logo">
+<a href="/"><img title="Transport info" alt="Transport info" src="/resources/images/transport-logo.png"></a>
+</div>
+<div class="header-tools">
+<script language="javascript">
+function submitSearchTerm(form, event){
+    var keyCode=(event.which)?event.which:window.event.keyCode;
+    if(keyCode == 13){
+      var searchTerm = form.query.value;
+      searchTerm = searchTerm.replace(/[^a-zA-Z0-9_\-@\.\*]+/g, " ");
+      location.href='/en/search-results.page?' + 'query=' + searchTerm;
+    }
+    else {
+      return true;
+    }
+}
+
+function submitSearch(form){
+  var searchTerm = form.query.value;
+  searchTerm = searchTerm.replace(/[^a-zA-Z0-9_\-@\.\*]+/g, " ");
+  location.href='/en/search-results.page?' + 'query=' + searchTerm;
+}
+</script>
+<form onSubmit="return false;" name="SearchForm" action="/en/maps-and-timetables/timetables-result.page?submit=true&componentID=1378867795932" accept-charset="utf-8" class="search" method="post">
+<label for="st-search-input">Site search</label><input accesskey="4" onkeypress="submitSearchTerm(this.form, event)" name="query" size="25" class="st-search-input" placeholder="Search site" type="search" id="st-search-input" value=""><button onClick="submitSearch(this.form)" type="submit">Search</button>
+</form>
+</div>
+</div>
+<nav role="navigation" id="navigation">
+<ul> 
+<li class="">
+<a accesskey="1" href="/en/index.page?" target="_top">Home</a>
+</li> 
+<li title="Trip planner" class="">
+<a accesskey="2" href="http://tp.transportnsw.info/trip/" target="_top">Plan your trip</a>
+</li> 
+<li class="">
+<a href="/en/transport-status/index.page?" target="_top">Transport status</a>
+</li> 
+<li class=" active">
+<a href="/en/maps-and-timetables/index.page?" target="_top">Maps &amp; timetables</a>
+</li> 
+<li class="">
+<a href="/en/tickets/index.page?" target="_top">Tickets</a>
+</li> 
+<li class="">
+<a href="/en/travelling-with-us/index.page?" target="_top">Travelling with us</a>
+</li> 
+<li class="">
+<a href="/en/contact-us/contact-us.page?" target="_top">Contact us</a>
+</li>
+</ul>
+</nav>
+</header>
+</div><!--ls:end[component-1378867795932]--></div></div></div><div class="ls-row-clr"></div></div></div><div class="ls-row container one-col" id="container"><div class="ls-fxr" id="ls-gen58135164-ls-fxr"><div class="ls-col" id="main"><div class="ls-col-body" id="ls-gen58135165-ls-col-body"><div class="ls-row primary" id="primary"><div class="ls-fxr" id="ls-gen58135166-ls-fxr"><div class="ls-area show-overflow main" id="R3C1R3C2R1A1"><div class="ls-area-body" id="ls-gen58135167-ls-area-body"><div class="ls-cmp-wrap ls-1st" id="w1378867795936"><!--ls:begin[component-1378867795936]--><div class="iw_component" id="1378867795936"><nav class="breadcrumb">
+<ol class="breadcrumb-list">
+<li class="breadcrumb-item">
+<a href="/en/index.page?">Home</a>
+</li>
+<li class="breadcrumb-item">
+<a href="/en/tickets/index.page">Tickets</a>
+</li>
+<li class="breadcrumb-item">
+<a href="/en/tickets/ticket-types/index.page">Ticket types</a>
+</li>
+<li class="breadcrumb-item">Bus</li>
+</ol>
+</nav><a name="mainContent" id="mainContent"></a>
+</div><!--ls:end[component-1378867795936]--></div><div class="ls-cmp-wrap" id="w1378867795938"><!--ls:begin[component-1378867795938]--><div class="iw_component" id="1378867795938"><h1 class="section-title timetable-heading routes-bus">
+<i class="icon icon-size-large icon-type-ferry"></i>&nbsp;<span class="icon-label"><span class="icon-label-subheading">Sydney ferries</span>Route F1 Manly - Circular Quay to Manly</span>
+</h1><span class="timetable-new-search"><a href="#" id="new-search">New search</a></span><div class="timetable-container bus-timetable-container">
+<div class="timetable-service-alerts">
+<a href="#" id="check-for-service-alerts" class="link-button">check for service alerts</a>
+</div>
+<div class="timetable-messages">
+<div tabindex="-1" class="is-hidden notification alert-box-timetable popup-content js-popup-content" id="popup-test">
+<span class="is-offscreen">Dialog start</span><i class="icon icon-size-large icon-type-service-alert"></i>
+<p>There is no timetable for selected date.</p>
+<p>Would you like to see the next available timetable?</p>
+<p class="button-line">
+<a class="button button-standard js-popup-close" href="#" id="nexttimetable">OK</a>
+			
+			&nbsp;
+			
+            <a onclick="setDateToDatePicker(); SetWCAAccessibility('wca');" href="#" class="js-popup-close" id="stayonpage">Stay on current page</a>
+</p>
+<span class="is-offscreen">Dialog end</span>
+</div>
+<div tabindex="-1" class="is-hidden notification alert-box-timetable popup-content js-popup-content" id="popup-test1">
+<span class="is-offscreen">Dialog start</span><i class="icon icon-size-large icon-type-service-alert"></i>
+<p>There is no current or upcoming service for Circular Quay to Manly</p>
+<p class="button-line">
+<a class="button button-standard js-popup-close" href="#" id="noupcomingclose">CLOSE</a>
+</p>
+<span class="is-offscreen">Dialog end</span>
+</div>
+<div tabindex="-1" class="is-hidden notification alert-box-timetable popup-content js-popup-content" id="popup-test2">
+<span class="is-offscreen">Dialog start</span><i class="icon icon-size-large icon-type-service-alert"></i>
+<p>There is no timetable for the date you have selected.</p>
+<p>Please choose a date within the next 32 days</p>
+<p class="button-line">
+<a class="button button-standard js-popup-close" href="#" id="wrongdateclose">Close</a>
+</p>
+<span class="is-offscreen">Dialog end</span>
+</div>
+</div>
+<div style="margin-bottom: 20px;" id="MapViewDiv">
+<span><a href="/resources/documents/sydney-ferries-network-map.pdf">Map View</a></span>
+</div>
+<div class="timetable-date">
+<div class="timetable-date-nav">
+<a href="#" id="subtractDate" class="timetable-date-prev"><img src="/resources/images/previous.png" title="Previous day" alt="Previous day"></a><span class="timetable-date-active">Wed 27 March 2013 (TODAY)</span><a href="#" id="addDate" class="timetable-date-next"><img src="/resources/images/next.png" title="Next day" alt="Next day"></a>
+<form class="datepicker-form" id="get-time-table" action="/en/maps-and-timetables/timetables-result.page?submit=true&componentID=1378867795938" method="post">
+<div class="datepicker-wrapper">
+<label class="" for="datePicker">Change date (DD/MM/YYYY)</label><input id="datePicker" class="js-datepicker" type="text"><button value="Go" class="button button-standard button-inline js-calendar-go" id="getTimeTable">Go</button>
+</div>
+</form>
+</div>
+<div class="timetable-date-msg">
+<div>
+<span class="timetable-date-note">Timetables are updated every 7-14 days.</span>
+</div>
+<div>
+<span class="timetable-date-note">Use the <a href="http://tp.transportnsw.info">trip planner</a> for daily updated information.</span>
+</div>
+</div>
+</div>
+<div class="timetable-time"></div>
+<div class="timetable-options">
+<div class="timetable-direction" id="timetable-direction1">
+<a href="#" id="reverseLink1">Reverse direction</a>
+</div>
+<div class="timetable-filter">
+<input id="wheelchair-accessible" name="wheelchair-accessible" type="checkbox"><label for="wheelchair-accessible"><img alt="" src="/resources/images/icon-wheelchair.png"> wheelchair accessible services only</label>
+</div>
+</div>
+<div class="timetable-stops js-timetable-stops">
+<table class="table-stripes timetable-stops-table js-datatable datatable" summary="Stops are listed in the first column. Find the stop closest to your starting point or destination, then read across that row to find out what time the service leaves that stop. The top row indicates if service has alerts or is wheelchair accessible.">
+<thead>
+<tr>
+<th>Stops</th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th><th><img alt="Manly Ferry gates close two minutes before scheduled departure times." src="/resources/images/icon-alert-inverted.png" tabindex="0" class="alert-icon js-alert js-alert-icon">&nbsp;<img alt="Wheelchair accessible" src="/resources/images/icon-wheelchair-white.png" tabindex="0" class="alert-icon js-alert"><span class="visuallyhidden">Depart</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="stop stop-major stop-major-odd js-stop-major">
+<th><span class="stop-name">Circular Quay_ No. 3 Wharf</span>,
+                            <span class="stop-loc">Sydney</span>
+<div class="stop-wrap">
+<span class="stop-no">stop <a href="">20004</a></span>
+</div>
+</th><td>05:30</td><td>06:20</td><td>06:50</td><td>07:15</td><td>07:40</td><td>08:10</td><td>08:40</td><td>09:00</td><td>09:30</td><td>10:00</td><td>10:30</td><td>11:00</td><td>11:30</td><td>12:00</td><td>12:30</td><td>13:00</td><td>13:30</td><td>14:00</td><td>14:30</td><td>15:00</td><td>15:30</td><td>16:00</td><td>16:30</td><td>17:00</td><td>17:30</td><td>18:00</td><td>18:30</td><td>18:50</td><td>19:25</td><td>19:55</td><td>20:45</td><td>21:30</td><td>22:15</td><td>23:00</td><td>23:45</td>
+</tr>
+<tr class="stop stop-major stop-major-even js-stop-major">
+<th><span class="stop-name">Manly Wharf</span>,
+                            <span class="stop-loc">Manly</span>
+<div class="stop-wrap">
+<span class="stop-no">stop <a href="">20951</a></span>
+</div>
+</th><td>06:00</td><td>06:50</td><td>07:20</td><td>07:45</td><td>08:10</td><td>08:40</td><td>09:10</td><td>09:30</td><td>10:00</td><td>10:30</td><td>11:00</td><td>11:30</td><td>12:00</td><td>12:30</td><td>13:00</td><td>13:30</td><td>14:00</td><td>14:30</td><td>15:00</td><td>15:30</td><td>16:00</td><td>16:30</td><td>17:00</td><td>17:30</td><td>18:00</td><td>18:30</td><td>19:00</td><td>19:20</td><td>19:55</td><td>20:25</td><td>21:15</td><td>22:00</td><td>22:45</td><td>23:30</td><td class="next-day">00:15</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="timetable-options">
+<div class="timetable-direction" id="timetable-direction2">
+<a href="#" id="reverseLink2">Reverse direction</a>
+</div>
+</div>
+</div><script type="text/javascript"> 
+    
+    $('input[type=checkbox]').click(function() {
+    if($(this).is(':checked')) {
+        checkTimeTableAvailability($('#datePicker').datepicker('getDate'),"",true,"");
+    } else {
+        checkTimeTableAvailability($('#datePicker').datepicker('getDate'),"",false,"");
+    }
+    });
+    
+    </script>
+</div><!--ls:end[component-1378867795938]--></div></div></div><div class="ls-row-clr"></div></div></div></div></div><div class="ls-row-clr"></div></div></div><div class="ls-row footer-full" id="footer-full"><div class="ls-fxr" id="ls-gen58135168-ls-fxr"><div class="ls-area footer" id="ls-row-3-area-1"><div class="ls-area-body" id="ls-gen58135169-ls-area-body"><div class="ls-cmp-wrap ls-1st" id="w1378867795933"><!--ls:begin[component-1378867795933]--><div class="iw_component" id="1378867795933"><footer role="contentinfo" id="footer">
+<a accesskey="3" href="#footer"></a>
+<div class="footer-inner">
+<nav class="footer-navigation">
+<div class="footer-navigation-list-col">
+<ul class="footer-navigation-list ">
+<li>
+<a href="/en/index.page?" target="_top"> Home</a>
+</li>
+<li>
+<a href="http://tp.transportnsw.info/trip/" target="_top"> Plan your trip</a>
+</li>
+<li>
+<a href="/en/maps-and-timetables/index.page?" target="_top"> Maps & timetables</a>
+</li>
+<li>
+<a href="/en/transport-status/index.page?" target="_top"> Transport status</a>
+<ul>
+<li>
+<a href="/en/transport-status/upcoming-landing.page?" target="_top"> Upcoming trackwork & scheduled changes</a>
+</li>
+<li>
+<a href="/en/transport-status/live-traffic-NSW.page?" target="_top"> Live Traffic NSW</a>
+</li>
+<li>
+<a href="/en/transport-status/news/index.page?" target="_top"> News</a>
+</li>
+<li>
+<a href="/en/transport-status/events/index.page?" target="_top"> Transport to events</a>
+</li>
+<li>
+<a href="/en/travelling-with-us/social.page?" target="_top"> Twitter</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="footer-navigation-list-col">
+<ul class="footer-navigation-list ">
+<li>
+<a href="/en/tickets/index.page?" target="_top"> Tickets</a>
+<ul>
+<li>
+<a href="/en/tickets/ticket-types/index.page?" target="_top"> Ticket types</a>
+</li>
+<li>
+<a href="/en/tickets/concessions/concessions.page?" target="_top"> Concessions</a>
+</li>
+<li>
+<a href="/en/tickets/day-passes/index.page?" target=""> Day passes</a>
+</li>
+<li>
+<a href="/en/tickets/eventservices/special-events.page?" target="_top"> Special events</a>
+</li>
+<li>
+<a href="/en/tickets/where-to-buy.page?" target="_top"> Where to buy</a>
+</li>
+<li>
+<a href="/en/tickets/free-shuttles.page?" target="_top"> Free city shuttles</a>
+</li>
+<li>
+<a href="/en/tickets/conditions.page?" target="_top"> Ticket conditions</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="footer-navigation-list ">
+<li>
+<a href="/en/about/about-us.page?" target=""> About us</a>
+<ul>
+<li>
+<a href="/en/about/jobs.page?" target="_top"> Jobs in NSW transport</a>
+</li>
+<li>
+<a href="/en/about/site-accessibility.page?" target="_top" accesskey="0"> Site accessibility</a>
+</li>
+<li>
+<a href="/en/about/help.page?" target="_top"> Help using this site</a>
+</li>
+<li>
+<a href="/en/about/developers-site-owners.page?" target="_top"> For developers & site owners</a>
+</li>
+<li>
+<a href="/en/about/conditions.page?" target="_top"> Conditions of using this site</a>
+</li>
+<li>
+<a href="/en/about/privacy.page?" target="_top"> Privacy statement</a>
+</li>
+<li>
+<a href="/en/about/map-copyright.page?" target="_top"> Map copyright</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="footer-navigation-list-col">
+<ul class="footer-navigation-list ">
+<li>
+<a href="/en/travelling-with-us/index.page?" target="_top"> Travelling with us</a>
+<ul>
+<li>
+<a href="/en/travelling-with-us/keep-updated.page?" target="_top"> Keep updated</a>
+</li>
+<li>
+<a href="/en/travelling-with-us/using-public-transport.page?" target="_top"> Using public transport</a>
+</li>
+<li>
+<a href="/en/travelling-with-us/access.page?" target="_top"> Accessible travel</a>
+</li>
+<li>
+<a href="/en/travelling-with-us/location-facilities.page?" target="_top"> Location facilities</a>
+</li>
+<li>
+<a href="https://appln.transport.nsw.gov.au/bikelockers/faces/jsp/public/home.xhtml" target="_top"> Bike lockers</a>
+</li>
+<li>
+<a href="/en/travelling-with-us/school-buses.page?" target="_top"> School travel</a>
+</li>
+<li>
+<a href="/en/travelling-with-us/groups.page?" target="_top"> Group travel</a>
+</li>
+<li>
+<a href="/en/travelling-with-us/regional.page?" target="_top"> Regional transport</a>
+</li>
+<li>
+<a href="/en/travelling-with-us/community-transport.page?" target="_top"> Community transport</a>
+</li>
+<li>
+<a href="/en/about/walking-cycling.page?" target="_top"> Walking & cycling</a>
+</li>
+<li>
+<a href="/en/travelling-with-us/taxis.page?" target="_top"> Taxis</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="footer-navigation-list-col">
+<ul class="footer-navigation-list extra">
+<li>
+<a href="/en/contact-us/contact-us.page?" target="_top" accesskey="9"> Contact us</a>
+<ul>
+<li>
+<a href="/en/contact-us/Feedback_Complaint.page?" target="_top"> Feedback, questions and complaints</a>
+</li>
+<li>
+<a href="/en/contact-us/transport-operators.page?" target="_top"> Transport operators</a>
+</li>
+<li>
+<a href="/en/contact-us/lost-property.page?" target="_top"> Lost property</a>
+</li>
+<li>
+<a href="/en/contact-us/info-centres.page?" target="_top"> Info centres</a>
+</li>
+<li> <span class="tel">131 500</span></li>
+<li> <span class="tel">131 450</span> Translating and interpreting services</li>
+<li> <span class="tel">1800 637 500</span> Hearing or speech impaired</li>
+</ul>
+</li>
+</ul>
+<ul class="footer-navigation-list ">
+<li>
+<a href="http://m.transportnsw.info/" target=""> Mobile website</a>
+<ul>
+<li>
+<a href="/en/travelling-with-us/apps.page?" target=""> Real-time apps</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<a class="footer-logo" href="http://www.transport.nsw.gov.au"><img itemtype="http://schema.org/Organization" itemscope="" alt="Transport for NSW" src="/resources/images/footer-logo.png"></a>
+</div>
+<span class="copyright">&#169; Transport for NSW 2013</span>
+</footer>
+</div><!--ls:end[component-1378867795933]--></div></div></div><div class="ls-row-clr"></div></div></div></div><!--ls:end[body]--></body></html>
