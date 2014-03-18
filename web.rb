@@ -14,6 +14,6 @@ end
 
 get "/timetable/:date" do |date|
   @departure_times ||= settings.cache.fetch(date) do
-    Timetable.new(date).departure_times.to_json
+    RemoteTimetable.new(date).departure_times.to_json
   end
 end
