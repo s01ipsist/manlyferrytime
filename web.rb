@@ -1,10 +1,26 @@
 require 'sinatra'
+require 'memcachier'
+require 'dalli'
 
-CACHE_TIME = 60 * 60 * 24 * 7
+require_relative 'app/transport_nsw'
+require_relative 'app/timetable'
+
+# MemCachier Setup
+set :cache, Dalli::Client.new
 
 get '/' do
-  expires CACHE_TIME, :public
   send_file File.expand_path('index.html', settings.public_folder)
 end
 
-set :static_cache_control, [:public, :max_age => CACHE_TIME]
+get "/timetable/:date" do |date|
+  transport_nsw = TransportNsw.new
+  departure_times = {}
+  TransportNsw::ROUTES.keys.each do |route|
+    response = transport_nsw.timetable(route, date)
+    route_times = Timetable.new(response.body).parse
+    departure_times[route] = route_times
+  end
+  departure_times.to_json
+end
+
+# /timetable/2014-03-18
