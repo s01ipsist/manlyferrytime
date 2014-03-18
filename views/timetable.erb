@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Upcoming Manly - Circular Quay Ferry Timetable for <%= params[:date] %></title>
+    <meta name="description" content="The simplest way to see upcoming Manly ferry departures from or to Circular Quay">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" >
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="container">
+      <h2>It's Manly Ferry Timetable Time!</h2>
+
+      <div id='timetable'>
+        <p>Showing full departure timetable for <%= params[:date] %></p>
+<img src="/img/Slow_Ferry.png" class="pull-left">
+<h6>&nbsp;Slow Ferry</h6>
+
+          <p>To Manly</p>
+          <ul>
+            <% @departure_times['To Manly:Slow Ferry'].each do |time| %>
+            <li><%= time %></li>
+            <% end %>
+          </ul>
+
+          <p>From Manly</p>
+          <ul>
+            <% @departure_times['From Manly:Slow Ferry'].each do |time| %>
+            <li><%= time %></li>
+            <% end %>
+          </ul>
+
+<img src="/img/Manly_Fast_Ferry.png" class="pull-left">
+<h6>&nbsp;<a href= "http://www.manlyfastferry.com.au">Manly Fast Ferry</a></h6>
+
+          <p>To Manly</p>
+          <ul>
+            <% @departure_times['To Manly:Manly Fast Ferry'].each do |time| %>
+            <li><%= time %></li>
+            <% end %>
+          </ul>
+
+          <p>From Manly</p>
+          <ul>
+            <% @departure_times['From Manly:Manly Fast Ferry'].each do |time| %>
+            <li><%= time %></li>
+            <% end %>
+          </ul>
+
+<img src="/img/Sydney_Fast_Ferries.png" class="pull-left">
+<h6>&nbsp;<a href="http://www.sydneyfastferries.com.au">Sydney Fast Ferries</a></h6>
+          <p>To Manly</p>
+          <ul>
+            <% @departure_times['To Manly:Sydney Fast Ferries'].each do |time| %>
+            <li><%= time %></li>
+            <% end %>
+          </ul>
+
+          <p>From Manly</p>
+          <ul>
+            <% @departure_times['From Manly:Sydney Fast Ferries'].each do |time| %>
+            <li><%= time %></li>
+            <% end %>
+          </ul>
+
+      </div>
+      <ul class="nav nav-pills nav-stacked">
+      <li><a href= "/">Upcoming departures</a></li>
+      <li><a href= "/about.html"><i class="icon-question-sign"></i> About</a></li>
+      </ul>
+    </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42880657-1', 'manlyferrytime.info');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

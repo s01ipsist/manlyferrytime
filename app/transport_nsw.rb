@@ -3,13 +3,14 @@ require 'httparty'
 class TransportNsw
   include HTTParty
   base_uri 'www.transportnsw.info'
-  debug_output $stderr
+  # debug_output $stderr
 
   def initialize
   end
 
   def timetable(route, date)
-    raise ArgumentError unless ROUTES.has_key?(route)
+    fail ArgumentError unless ROUTES.has_key?(route)
+    fail ArgumentError unless date =~ /\d\d\d\d\-\d\d\-\d\d/
     options = { query: ROUTES[route].merge({ date: date }) }
     self.class.get('/en/maps-and-timetables/timetables-result.page', options)
   end

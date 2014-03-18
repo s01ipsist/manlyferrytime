@@ -24,7 +24,7 @@ function departure_times(date){
   $.ajax({
       'async': false,
       'global': false,
-      'url': "timetable/" + date,
+      'url': "timetable/" + date + ".json",
       'dataType': "json",
       'success': function (data) {
           json = data;
@@ -81,8 +81,14 @@ function displayUpcomingAll(){
   }
   _.each(routes_filtered, displayUpcoming);
 
-  var a131500 = _.template("<a href='<%= url %>'><i class='icon-hand-right'></i> Check on Transport NSW</a>");
-  $("#timetable").append(a131500({url : get131500url()}));
+  var timetableLink = _.template("<li><a href='/timetable/<%= date %>'>See Today's Full Timetable</a></li>");
+  var a131500Link = _.template("<li><a href='<%= url %>'><i class='icon-hand-right'></i> Check on Transport NSW</a></li>");
+  var aboutLink = "<li><a href= '/about.html'><i class='icon-question-sign'></i> About</a></li>";
+
+  var list = "<ul class='nav nav-pills nav-stacked'><% _.each(links, function(link) { %> <li><%= link %></li> <% }); %></ul>";
+  var links = _.template(list, {links: [timetableLink({ date : date }), a131500Link({ url : get131500url() }), aboutLink]});
+
+  $("#timetable").append(links);
 }
 
 $("#from").change(function() {
