@@ -9,3 +9,4 @@ gem 'httparty'
 gem 'rspec', :group => :test
 gem 'webmock', :group => :test
 gem 'nokogiri'
+gem 'addressable'

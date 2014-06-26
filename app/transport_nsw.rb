@@ -15,9 +15,6 @@ class TransportNsw
     self.class.get('/en/maps-and-timetables/timetables-result.page', options)
   end
 
-  # see route codes by clicking on show timetable for route at
-  # http://www.transportnsw.info/en/maps-and-timetables/index.page?#ferry-status-updates-item-tab
-  # and getting line url param
   ROUTES = {
     'To Manly:Slow Ferry' => #Circular Quay to Manly'
       {
@@ -28,7 +25,7 @@ class TransportNsw
         type: 'reverse',
         directionName: '(090F1)',
         operator: '112',
-        motDesc: 'Sydney ferries',
+        motDesc: 'Sydney Ferries Network',
         count: '2',
       },
     'To Manly:Manly Fast Ferry' =>  #Circular Quay to Manly (Manly Fast Ferry)'
@@ -64,7 +61,7 @@ class TransportNsw
         type: 'normal',
         directionName: '(090F1)',
         operator: '112',
-        motDesc: 'Sydney ferries',
+        motDesc: 'Sydney Ferries Network',
         count: '2',
       },
     'From Manly:Manly Fast Ferry' =>  #Manly to Circular Quay (Manly Fast Ferry)'
@@ -96,17 +93,12 @@ end
 
 =begin
 
-load 'app/transport_nsw.rb'
-load 'app/timetable.rb'
+# see route codes by clicking on show timetable for route at
+# http://www.transportnsw.info/en/maps-and-timetables/index.page?#ferry-status-updates-item-tab
+# and getting line url param
 
-transport_nsw = TransportNsw.new
-departure_times = {}
-TransportNsw::ROUTES.keys.each do |route|
-  response = transport_nsw.timetable(route, '2014-03-18')
-  route_times = Timetable.new(response.body).parse
-  departure_times[route] = route_times
-end
-departure_times.to_json
-
-
+require 'addressable/uri'
+url = 'http://www.transportnsw.info/en/maps-and-timetables/timetables-result.page?routeNum=F1%20Manly&wca=false&mode=ferry&date=2014-06-26&direction=inbound&type=normal&directionName=(090F1)&operator=112&motDesc=Sydney%20Ferries%20Network&count=2'
+uri = Addressable::URI.parse(url)
+uri.query_values
 =end
