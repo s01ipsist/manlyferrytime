@@ -10,6 +10,6 @@ class TimetableParser
     page.css('table tbody tr.stop-major-odd:first-child td').map{ |node|
       t = node.inner_html
       t if t =~ /(\d+):(\d+)/
-    }
+    }.uniq
   end
 end

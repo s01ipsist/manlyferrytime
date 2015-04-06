@@ -1,4 +1,4 @@
-var routes = ['To Manly:Slow Ferry','To Manly:Manly Fast Ferry','To Manly:Sydney Fast Ferries','From Manly:Slow Ferry','From Manly:Manly Fast Ferry','From Manly:Sydney Fast Ferries'];
+var routes = ['To Manly:Slow Ferry','To Manly:Manly Fast Ferry','From Manly:Slow Ferry','From Manly:Manly Fast Ferry'];
 
 function updateTime(){
   var now = new Date();
