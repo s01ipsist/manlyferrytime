@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.1'
+ruby '2.2.2'
 gem 'sinatra'
 gem 'unicorn'
 gem 'json'
@@ -14,4 +14,8 @@ group :test do
   gem 'vcr'
   gem 'webmock'
   gem 'timecop'
+end
+
+group :development do
+  gem 'foreman'
 end
