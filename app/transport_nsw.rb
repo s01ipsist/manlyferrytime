@@ -38,7 +38,7 @@ class TransportNsw
         "type"=>"normal",
         "directionName"=>"(55MFF)",
         "operator"=>"306",
-        "motDesc"=>"Private ferry services",
+        "motDesc"=>"Private ferry and fast ferry services",
         "count"=>"2"
       },
     'From Manly:Slow Ferry' => #Manly to Circular Quay'
@@ -62,7 +62,7 @@ class TransportNsw
         "type"=>"normal",
         "directionName"=>"(55MFF)",
         "operator"=>"306",
-        "motDesc"=>"Private ferry services",
+        "motDesc"=>"Private ferry and fast ferry services",
         "count"=>"2"
       }
     }
@@ -76,7 +76,7 @@ end
 
 require 'addressable/uri'
 require 'pp'
-url = 'http://www.transportnsw.info/en/maps-and-timetables/timetables-result.page?routeNum=F1%20Manly&wca=false&mode=ferry&date=2015-04-06&direction=outbound&type=normal&directionName=(090F1)&operator=112&motDesc=Sydney%20Ferries%20Network&count=2'
+url = 'http://www.transportnsw.info/en/maps-and-timetables/timetables-result.page?routeNum=Manly%20Fast%20Ferry&wca=false&mode=ferry&date=2015-07-06&direction=inbound&type=normal&directionName=(55MFF)&operator=306&motDesc=Private%20ferry%20and%20fast%20ferry%20services&count=2'
 uri = Addressable::URI.parse(url)
 keep = uri.query_values
 keep.delete('date')
