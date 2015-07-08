@@ -20,6 +20,10 @@ get '/' do
   send_file File.expand_path('index.html', settings.public_folder)
 end
 
+get '/timetable/tomorrow' do
+  redirect "/timetable/#{(Date.today + 1).to_s}"
+end
+
 get "/timetable/:date.?:format?" do |date, format|
   @departure_times = get_departure_times(date)
   if format == 'json'
